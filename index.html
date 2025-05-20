@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curriculum Vitae - Nama Anda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile-photo">
+        <img src="ikhsan.jpg" alt="Foto Profil">
+      </div>
+      <h1>Ikhsan Satria Yuda Pratama</h1>
+      <p class="title">Fresh Graduate</p>
+      <p class="contact">Email: ikhsanyuda02@gmail.com | Telepon: 0812-8115-3985</p>
+    </header>
+
+    <section class="about">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah seorang lulusan SMK dari jurusan Teknik Komputer dan Jaringan yang memiliki
+kemampuan yang baik dan semangat yang tinggi dalam bidang komputer maupun jaringan,
+administrasi, input dan rekapitulasi data, serta memiliki pemahaman yang baik mengenai prosedur
+kerja, baik prosedur operasional maupun prosedur keselamatan kerja. Memiliki minat karir dalam
+bidang industri terutama dalam bidang produksi serta terbuka untuk kesempatan karir lain..
+      </p>
+    </section>
+
+    <section class="experience">
+      <h2>Pengalaman Kerja</h2>
+      <div class="item">
+        <h3>Operator Produksi - PT Global Jaya Elektronik</h3>
+        <span class="date">2022 - 2023</span>
+        <p>Memantau jumlah produk yang diproduksi dan mengatur kuantitas produk sesuai dengan permintaan.</p>
+      </div>
+      <div class="item">
+        <h3>Operator Produksi - PT YKK AP Indonesia</h3>
+        <span class="date">2023 - sekarang</span>
+        <p>Mengawasi lembar data produksi dan menentukan jumlah produk yang telah diproduksi.</p>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Pendidikan</h2>
+      <div class="item">
+        <h3>SMK Bina Am Ma'mur</h3>
+        <span class="date">2020 - 2023</span>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Keterampilan</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+	
+	<section class="contact-form">
+  <h2>Hubungi Saya</h2>
+  <form id="formKontak">
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="pesan">Pesan:</label><br>
+    <textarea id="pesan" name="pesan"></textarea><br>
+
+    <button type="submit">Kirim</button>
+  </form>
+  <p id="peringatan" style="color: red;"></p>
+</section>
+
+
+    <footer>
+      <p>© 2025 @ikhsaanp</p>
+    </footer>
+  </div>
+  
+  <script>
+  document.getElementById('formKontak').addEventListener('submit', function(e) {
+    const nama = document.getElementById('nama').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (nama === '' || email === '') {
+      e.preventDefault();
+      document.getElementById('peringatan').textContent = 'Nama dan Email wajib diisi.';
+    } else {
+      document.getElementById('peringatan').textContent = '';
+      alert('Form berhasil dikirim!');
+    }
+  });
+</script>
+
+</body>
+</html>
